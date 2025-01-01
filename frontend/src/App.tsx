@@ -8,7 +8,9 @@ export function App() {
   return (
 
     <main className="flex justify-center items-center h-screen">
-      {isOpenRegister ? <RegisterModal setIsOpenRegister={setIsOpenRegister}/> : <LoginModal setIsOpenRegister={setIsOpenRegister}/>}
+      {isOpenRegister ? 
+        <RegisterModal setIsOpenRegister={setIsOpenRegister}/> 
+        : <LoginModal setIsOpenRegister={setIsOpenRegister}/>}
     </main>
   )
 }
