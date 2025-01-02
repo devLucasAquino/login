@@ -9,7 +9,9 @@ interface CreateUserServiceProps {
 class CreateUserService {
     async execute({ name, email, password }: CreateUserServiceProps){
 
-        if(!name || !email) return
+        if(!name || !email || !password) {
+            throw new Error("Todos campos devem ser preenchidos.")
+        };
 
         const hasUser = await prismaClient.users.findUnique({
             where: {
@@ -23,7 +25,7 @@ class CreateUserService {
 
         const user = await prismaClient.users.create({
             data: {
-                name, email, password
+                name, email, password, createdAt: new Date()
             }
         });
 
