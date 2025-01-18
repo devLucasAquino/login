@@ -7,6 +7,12 @@ At first it is a small project with Login, where I intend to add JWT authenticat
 
 
 
+
+
+
+
+
+
 <a href="https://skillicons.dev"   >
   <img src="https://skillicons.dev/icons?i=javascript,typescript,nodejs,prisma,react,tailwind,vite" />
 </a>
